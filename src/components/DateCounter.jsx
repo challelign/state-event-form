@@ -2,20 +2,8 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import {
-	Box,
-	Card,
-	CssBaseline,
-	Dialog,
-	DialogActions,
-	DialogContent,
-	DialogContentText,
-	DialogTitle,
-	LinearProgress,
-	Typography,
-} from "@mui/material";
+import { Box, CssBaseline, LinearProgress, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 import { Container } from "@mui/system";
 import { useState } from "react";
 const DateCounter = () => {
@@ -41,17 +29,27 @@ const DateCounter = () => {
 		<>
 			<Container fixed>
 				<LinearProgress color="inherit" />
-
+				<br></br>
 				<CssBaseline />
 				<Box>
-					<Button onClick={handleStepPrev}>-</Button>
+					<Button variant="outlined" onClick={handleStepPrev}>
+						-
+					</Button>
+
 					<Button disabled>Step : {step}</Button>
-					<Button onClick={handleStepNext}>+</Button>
+					<Button variant="outlined" onClick={handleStepNext}>
+						+
+					</Button>
 				</Box>
+				<br></br>
 				<Box>
-					<Button onClick={handleCountPrev}>-</Button>
+					<Button variant="outlined" onClick={handleCountPrev}>
+						-
+					</Button>
 					<Button disabled>Count : {count}</Button>
-					<Button onClick={handleCountNext}>+</Button>
+					<Button variant="outlined" onClick={handleCountNext}>
+						+
+					</Button>
 				</Box>
 
 				<Typography>

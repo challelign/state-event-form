@@ -55,7 +55,7 @@ function App() {
 				<Container fixed>
 					<CssBaseline />
 					<Box>
-						<Button className={step >= 1 ? "active" : ""} variant="contained">
+						<Button className={step >= 1 ? "active" : ""} variant="outlined">
 							1
 						</Button>
 						<Button className={step >= 2 ? "active" : ""}>2</Button>
@@ -66,7 +66,7 @@ function App() {
 					</Typography>
 
 					<Stack spacing={2} direction="row">
-						<Button onClick={handlePrevious} variant="contained">
+						<Button onClick={handlePrevious} variant="outlined">
 							previous
 						</Button>
 						<Button onClick={handleNext} variant="outlined">
