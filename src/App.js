@@ -31,7 +31,7 @@ function App() {
 
 	const handlePrevious = () => {
 		// if (step > 1) setStep(step - 1);
-		// best general way
+		//  general way
 		if (step > 1) {
 			setStep((s) => s - 1);
 		}
