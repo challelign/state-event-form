@@ -46,7 +46,12 @@ function App() {
 	return (
 		<>
 			<Container>
-				<Button className="close" onClick={() => setIsOpen((open) => !open)}>
+				<Button
+					variant="outlined"
+					className="close"
+					onClick={() => setIsOpen((open) => !open)}
+					sx={{ m: 2 }}
+				>
 					&times;
 				</Button>
 			</Container>
@@ -55,11 +60,45 @@ function App() {
 				<Container fixed>
 					<CssBaseline />
 					<Box>
-						<Button className={step >= 1 ? "active" : ""} variant="outlined">
+						<Button
+							sx={{
+								...(step >= 1 && {
+									border: "1px solid",
+									borderColor: "primary",
+									color: "primary",
+									m: 1,
+									backgroundColor: "transparent",
+								}),
+							}}
+						>
 							1
 						</Button>
-						<Button className={step >= 2 ? "active" : ""}>2</Button>
-						<Button className={step >= 3 ? "active" : ""}>3</Button>
+						<Button
+							sx={{
+								...(step >= 2 && {
+									border: "1px solid",
+									borderColor: "primary",
+									color: "primary",
+									m: 1,
+									backgroundColor: "transparent",
+								}),
+							}}
+						>
+							2
+						</Button>
+						<Button
+							sx={{
+								...(step >= 3 && {
+									border: "1px solid",
+									borderColor: "primary",
+									color: "primary",
+									m: 1,
+									backgroundColor: "transparent",
+								}),
+							}}
+						>
+							3
+						</Button>
 					</Box>
 					<Typography>
 						Step {step}: {messages[step - 1]}
