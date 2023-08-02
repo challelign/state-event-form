@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { Container } from "@mui/system";
 import { useState } from "react";
+import CommonButton from "./components/CommonButton";
 const messages = [
 	"Learn React *",
 	"Apply for Jobs ",
@@ -101,6 +102,22 @@ function App() {
 						<Button onClick={handleNext} variant="outlined">
 							Next
 						</Button>
+
+						{/* using Common Button  */}
+						<CommonButton
+							textColor="#fff"
+							bgColor="#7950f2"
+							onClick={handlePrevious}
+						>
+							<span>👈</span> previous Using Common Btn
+						</CommonButton>
+						<CommonButton
+							textColor="#fff"
+							bgColor="#7950f2"
+							onClick={handleNext}
+						>
+							Next Using Common Btn<span>👉</span>
+						</CommonButton>
 					</Stack>
 
 					<Button className="show" onClick={() => setShowMore((open) => !open)}>

@@ -1,0 +1,13 @@
+in CommonButton component we pass children as props
+->the children prop allow us to pass JSX into an element (besides regular pros)
+using this props we can define as money as attributes to CommonButton JSX
+
+<CommonButton
+    textColor="#fff"
+    bgColor="#7950f2"
+    onClick={handleNext}
+    >
+            Next Using Common Btn<span>👉</span>
+</CommonButton>
+
+after closing tag we can use more content because we pass children as prop
